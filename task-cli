@@ -1,0 +1,6 @@
+#!/bin/bash
+ARGS=""
+for arg in "$@"; do
+  ARGS="$ARGS\"$arg\" "  # Каждый аргумент экранируем и добавляем в строку
+done
+mvn exec:java -Dexec.args="$ARGS" -q | grep -v "^\[INFO\]" | grep -v "^\[WARNING\]" | grep -v "^\[ERROR\]"

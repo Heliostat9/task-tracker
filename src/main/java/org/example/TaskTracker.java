@@ -43,22 +43,8 @@ public class TaskTracker
     public TaskTracker(String filePath) {
         filename = filePath;
         Gson gson = GsonConfig.createGson();
-        JsonReader reader = null;
 
-        try {
-            URL resource = getClass().getClassLoader().getResource("example.json");
-            File file = new File(resource.getFile());
-            reader = new JsonReader(new FileReader(file));
-        } catch (FileNotFoundException e) {
-            System.out.println("File not found");
-        }
-
-        if (reader == null) {
-            tasks = new ArrayList<>();
-            return;
-        }
-
-        try {
+        try (Reader reader = new FileReader("example.json")) {
             Task[] jsonTasks = gson.fromJson(reader, Task[].class);
             tasks = new ArrayList<>(Arrays.asList(jsonTasks));
             counterId = tasks.get(tasks.size() - 1).getId();

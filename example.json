@@ -42,13 +42,6 @@
     "updatedAt": "2024-04-21 12:15:00"
   },
   {
-    "id": 7,
-    "name": "Implement feature X",
-    "status": "in-progress",
-    "createdAt": "2024-04-24 15:00:00",
-    "updatedAt": "2024-04-24 15:00:00"
-  },
-  {
     "id": 8,
     "name": "Update dependencies",
     "status": "in-progress",
@@ -71,7 +64,7 @@
   },
   {
     "id": 11,
-    "name": "Suck Dick",
+    "name": "You know what here was!",
     "status": "todo",
     "createdAt": "2024-11-24 21:43:46",
     "updatedAt": "2024-11-24 21:43:46"
