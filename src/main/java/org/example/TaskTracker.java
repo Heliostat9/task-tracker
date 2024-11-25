@@ -1,10 +1,8 @@
 package org.example;
 
 import com.google.gson.Gson;
-import com.google.gson.stream.JsonReader;
 
 import java.io.*;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -27,13 +25,6 @@ public class TaskTracker
      * Json файл с данными
      */
     private String filename;
-
-    /**
-     * Конструктор для инициализации трекера задач
-     */
-    public TaskTracker() {
-        tasks = new ArrayList<>();
-    }
 
     /**
      * Конструктор с использование файла json с задачами
@@ -155,20 +146,6 @@ public class TaskTracker
         Task task = find(id);
         if (task != null) {
             task.markInProgress();
-        }
-    }
-
-    /**
-     * Найти и пометить как "Нужно сделать"
-     *
-     * @param id - идентификатор задачи
-     */
-    public void markTodo(int id)
-    {
-        Task task = find(id);
-
-        if (task != null) {
-            task.markTodo();
         }
     }
 
