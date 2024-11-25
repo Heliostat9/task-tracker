@@ -24,7 +24,7 @@ public class TaskTracker
     /**
      * Json файл с данными
      */
-    private String filename;
+    private final String filename;
 
     /**
      * Конструктор с использование файла json с задачами
