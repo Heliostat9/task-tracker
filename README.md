@@ -7,3 +7,6 @@
 2.Run project with arguments
 
 ```./task-cli {your arguments}```
+
+Link on project description:
+https://roadmap.sh/projects/task-tracker
